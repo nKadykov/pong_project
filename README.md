@@ -50,7 +50,7 @@ vcpkg install sfml:x64-windows
 
 6. Клонировать репозиторий:
 ```markdown
-git clone https://github.com/nKadykov/shooter_project.git
+git clone https://github.com/nKadykov/pong_project.git
 ```
 
 8. Создать папку с проектом:
