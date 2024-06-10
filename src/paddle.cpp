@@ -1,8 +1,8 @@
 #include "paddle.h"
 
-Paddle::Paddle(float startX, float startY) {
-	m_position.x = startX;
-	m_position.y = startY;
+Paddle::Paddle(float start_x, float start_y) {
+	m_position.x = start_x;
+	m_position.y = start_y;
 
 	m_shape.setSize(sf::Vector2f(100, 12));
 	m_shape.setFillColor(sf::Color::Blue);
