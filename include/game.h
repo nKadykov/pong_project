@@ -23,6 +23,6 @@ public:
 	void setState(GameState);
 	GameState getState() const;
 
-	void Start(sf::RenderWindow& sf);
+	void Start(sf::RenderWindow&);
 };
 
