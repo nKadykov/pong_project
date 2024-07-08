@@ -2,11 +2,14 @@
 
 GameOverWindow::GameOverWindow() {
 	m_state = GameOverState::ON;
-	m_texture.loadFromFile("assets/gameover1.png");
+	if(!m_texture.loadFromFile("assets/gameover1.png"))
+		exit(1);
 	m_sprite.setTexture(m_texture);
-	m_background_texture.loadFromFile("assets/back1.jpg");
+	if(!m_background_texture.loadFromFile("assets/back1.jpg"))
+		exit(1);
 	m_background_sprite.setTexture(m_background_texture);
-	m_button_texture.loadFromFile("assets/again2.png");
+	if(!m_button_texture.loadFromFile("assets/again2.png"))
+		exit(1);
 	m_button_sprite.setTexture(m_button_texture);
 }
 

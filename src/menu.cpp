@@ -3,14 +3,16 @@
 Menu::Menu() {
 	m_menu_state = MenuState::ON;
 	m_button_state = ButtonState::NONE;
-	m_menu_texture.loadFromFile("assets/back1.jpg");
+	if(!m_menu_texture.loadFromFile("assets/back1.jpg"))
+		exit(1);
 	m_menu_sprite.setTexture(m_menu_texture);
 }
 
 Menu::Menu(std::string filename) {
 	m_menu_state = MenuState::OFF;
 	m_button_state = ButtonState::NONE;
-	m_menu_texture.loadFromFile(filename);
+	if(!m_menu_texture.loadFromFile(filename))
+		exit(1);
 	m_menu_sprite.setTexture(m_menu_texture);
 }
 

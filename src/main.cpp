@@ -13,13 +13,16 @@ int main()
     sf::Event event;
 
     sf::Texture gameover_texture;
-    gameover_texture.loadFromFile("assets/back1.jpg");
+    if(!gameover_texture.loadFromFile("assets/back1.jpg"))
+        exit(1);
     sf::Sprite gameover_texture_sprite(gameover_texture);
 
     sf::Texture button_texture_1;
     sf::Texture button_texture_2;
-    button_texture_1.loadFromFile("assets/button2.png");
-    button_texture_2.loadFromFile("assets/button3.png");
+    if(!button_texture_1.loadFromFile("assets/button2.png"))
+        exit(1);
+    if(!button_texture_2.loadFromFile("assets/button3.png"))
+        exit(1);
 
     Menu menu("assets/back1.jpg");
     menu.addButton(500, 200, button_texture_1);

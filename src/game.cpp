@@ -1,7 +1,8 @@
 #include "game.h"
 
 Game::Game() {
-    m_texture.loadFromFile("assets/back2.jpg");
+    if(!m_texture.loadFromFile("assets/back2.jpg"))
+        exit(1);
     m_sprite.setTexture(m_texture);
 }
 
@@ -16,7 +17,8 @@ GameState Game::getState() const {
 void Game::Start(sf::RenderWindow& window) {
 
     sf::Music music;
-    music.openFromFile("assets/back1.mp3");
+    if(!music.openFromFile("assets/back1.mp3"))
+        exit(1);
     music.play();
 
     sf::Clock clock;
