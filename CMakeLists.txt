@@ -11,7 +11,7 @@ else()
     set(ASSETS_OUTPUT_DIR assets)
 endif()
 
-set(CMAKE_TOOLCHANE_FILE "C:/vcpkg/scripts/buildsystems/vcpkg.cmake")
+set(CMAKE_TOOLCHAIN_FILE "C:/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
 include_directories(include)
 
